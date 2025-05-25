@@ -1,0 +1,2 @@
+CREATE DATABASE InvestigacionLenguajes_2025_ErroresYExepciones
+USE InvestigacionLenguajes_2025_ErroresYExepciones
