@@ -1,4 +1,4 @@
-package investigacion.lenguajes.ManejoDeErroresYExepciones.data;
+package com.ucr.lenguajes.gestprod.data;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,8 +11,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
-import investigacion.lenguajes.ManejoDeErroresYExepciones.domain.Categoria;
-import investigacion.lenguajes.ManejoDeErroresYExepciones.domain.Producto;
+import com.ucr.lenguajes.gestprod.domain.Categoria;
+import com.ucr.lenguajes.gestprod.domain.Producto;
 @Repository
 public class ProductoData {
 	  @Autowired

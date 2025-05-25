@@ -1,9 +1,10 @@
-package investigacion.lenguajes.ManejoDeErroresYExepciones.business;
+package com.ucr.lenguajes.gestprod.business;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
-import investigacion.lenguajes.ManejoDeErroresYExepciones.data.ProductoData;
+import com.ucr.lenguajes.gestprod.data.ProductoData;
 
 @Service
 public class ProductoBusiness {

@@ -1,4 +1,4 @@
-package investigacion.lenguajes.ManejoDeErroresYExepciones.data;
+package com.ucr.lenguajes.gestprod.data;
 
 import java.util.List;
 import java.util.Map;
@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
-import investigacion.lenguajes.ManejoDeErroresYExepciones.domain.Categoria;
+import com.ucr.lenguajes.gestprod.domain.Categoria;
 @Repository
 public class CategoriaData {
 	  @Autowired

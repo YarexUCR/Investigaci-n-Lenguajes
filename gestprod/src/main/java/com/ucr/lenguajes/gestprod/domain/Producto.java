@@ -1,4 +1,4 @@
-package investigacion.lenguajes.ManejoDeErroresYExepciones.domain;
+package com.ucr.lenguajes.gestprod.domain;
 
 import java.math.BigDecimal;
 
