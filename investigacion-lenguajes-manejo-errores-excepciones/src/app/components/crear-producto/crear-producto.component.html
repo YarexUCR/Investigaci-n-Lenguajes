@@ -1,1 +1,49 @@
-<p>crear-producto works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="formulario">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" />
+      
+      <mat-error *ngIf="form.get('nombre')?.hasError('required')">
+        El nombre es obligatorio
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" formControlName="precio" />
+      <mat-error *ngIf="form.get('precio')?.hasError('required')">
+        El precio es obligatorio
+      </mat-error>
+      <mat-error *ngIf="form.get('precio')?.hasError('min')">
+        El precio debe ser mayor a 0
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Stock</mat-label>
+      <input matInput type="number" formControlName="stock" />
+      <mat-error *ngIf="form.get('stock')?.hasError('required')">
+        El stock es obligatorio
+      </mat-error>
+      <mat-error *ngIf="form.get('stock')?.hasError('min')">
+        El stock no puede ser negativo
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+        <mat-label>Categoría</mat-label>
+        <mat-select formControlName="categoriaId">
+          <mat-option *ngFor="let cat of categorias" [value]="cat.id">
+            {{ cat.nombre }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('categoriaId')?.hasError('required')">
+          La categoría es obligatoria
+        </mat-error>
+      </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">
+      Crear Producto
+    </button>
+  </form>
+  
