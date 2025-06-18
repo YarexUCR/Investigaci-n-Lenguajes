@@ -1,0 +1,33 @@
+<p>global</p>
+<p>Demo</p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="formulario">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" formControlName="precio" />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Stock</mat-label>
+      <input matInput type="number" formControlName="stock" />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Categoría</mat-label>
+      <mat-select formControlName="categoriaId">
+        <mat-option *ngFor="let cat of categorias" [value]="cat.id">
+          {{ cat.nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">
+      Probar Envío
+    </button>
+  </form>
+  

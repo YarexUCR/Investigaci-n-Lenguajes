@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 import { CrearProductoDemoComponent } from './components/demo/crear-producto-demo.component';
+import { CrearProductoGlobalComponent } from './components/crear-producto-global.component';
 
 export const routes: Routes = [
     {
@@ -10,4 +11,6 @@ export const routes: Routes = [
       },
     { path: 'crearproducto', component: CrearProductoComponent },
     {path: 'demo', component: CrearProductoDemoComponent} // Para pruebas de manejo de errores
+  ,{path: 'demo2', component: CrearProductoGlobalComponent} 
+
 ];
